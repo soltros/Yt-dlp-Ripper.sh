@@ -117,9 +117,3 @@ This script:
 - Resume support via saved link list
 - Support for playlists >100 videos with pagination (YouTube sometimes hides these)
 - GUI frontends (Zenity / Fyne)
-
----
-
-## 📝 License
-
-MIT License © 2025 YourNameHere
