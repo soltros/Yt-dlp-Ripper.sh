@@ -10,7 +10,7 @@ AUDIO_FORMAT=${AUDIO_FORMAT:-mp3}
 
 # Extract playlist title
 echo "📡 Fetching playlist title..."
-PLAYLIST_TITLE=$(yt-dlp --flat-playlist --print "%(playlist_title)s" "$PLAYLIST_URL" | head -n 1)
+PLAYLIST_TITLE=$(yt-dlp --flat-playlist --print "%(playlist_title)s" "$PLAYLIST_URL" 2>/dev/null | sed -n '1p')
 
 if [[ -z "$PLAYLIST_TITLE" ]]; then
   echo "❌ Failed to retrieve playlist title. Exiting."
